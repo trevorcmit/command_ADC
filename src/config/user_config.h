@@ -1,14 +1,7 @@
 /**
  ****************************************************************************************
- *
  * @file user_config.h
- *
  * @brief User configuration file.
- *
- * Copyright (C) 2015-2020 Dialog Semiconductor.
- * This computer program includes Confidential, Proprietary Information
- * of Dialog Semiconductor. All Rights Reserved.
- *
  ****************************************************************************************
  */
 
@@ -19,7 +12,6 @@
  * INCLUDE FILES
  ****************************************************************************************
  */
-
 #include "app_user_config.h"
 #include "arch_api.h"
 #include "app_default_handlers.h"
@@ -47,7 +39,6 @@
  * - APP_CFG_HOST_PRIV_NRPA         Host Privacy, NRPA (non-connectable ONLY)
  * - APP_CFG_CNTL_PRIV_RPA_PUB      Controller Privacy, RPA or PUB, Public Identity
  * - APP_CFG_CNTL_PRIV_RPA_RAND     Controller Privacy, RPA, Public Identity
- *
  * Select only one option for privacy / addressing configuration.
  **************************************************************************
  */
@@ -57,7 +48,6 @@
  * Controller Privacy Mode:
  * - APP_CFG_CNTL_PRIV_MODE_NETWORK Controler Privacy Network mode (default)
  * - APP_CFG_CNTL_PRIV_MODE_DEVICE  Controler Privacy Device mode
- *
  * Select only one option for controller privacy mode configuration.
  **************************************************************************
  */
@@ -70,11 +60,9 @@
 
 /******************************************
  * Default sleep mode. Possible values are:
- *
  * - ARCH_SLEEP_OFF
  * - ARCH_EXT_SLEEP_ON
  * - ARCH_EXT_SLEEP_OTP_COPY_ON
- *
  ******************************************
  */
 // static const sleep_state_t app_default_sleep_mode = ARCH_SLEEP_OFF;

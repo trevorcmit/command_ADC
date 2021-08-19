@@ -3092,14 +3092,14 @@ Image component sizes
        132         18          0          0         24       2472   trng.o
        352         14          0          0         64      11864   uart.o
          0          0       1419          0          0       2011   user_custs1_def.o
-       600         28          8          0          6       7645   user_custs1_impl.o
+       600         28          8          0          6       7637   user_custs1_impl.o
          0          0         56          0          0        933   user_custs_config.o
        208         12          0          0          0       3249   user_periph_setup.o
        716         60          0          0         74       6675   user_peripheral.o
        156         14          0          0         12       3966   wkupct_quadec.o
 
     ----------------------------------------------------------------------
-     14400       1306       3010         12       6588     851112   Object Totals
+     14400       1306       3010         12       6588     851104   Object Totals
          0          0         32          0         80          0   (incl. Generated)
          0          0          7          3         18          0   (incl. Padding)
 
@@ -3143,8 +3143,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     15966       1384       3010         12       6588     848860   Grand Totals
-     15966       1384       3010         12       6588     848860   ELF Image Totals
+     15966       1384       3010         12       6588     848852   Grand Totals
+     15966       1384       3010         12       6588     848852   ELF Image Totals
      15966       1384       3010         12          0          0   ROM Totals
 
 ==============================================================================

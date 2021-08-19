@@ -12,7 +12,6 @@
  * INCLUDE FILES
  ****************************************************************************************
  */
-
 #include <stdio.h>
 #include "app_callback.h"
 #include "app_default_handlers.h"

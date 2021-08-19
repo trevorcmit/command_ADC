@@ -1,14 +1,7 @@
 /**
  ****************************************************************************************
- *
  * @file user_custs1_def.c
- *
  * @brief Custom Server 1 (CUSTS1) profile database definitions.
- *
- * Copyright (C) 2016-2019 Dialog Semiconductor.
- * This computer program includes Confidential, Proprietary Information
- * of Dialog Semiconductor. All Rights Reserved.
- *
  ****************************************************************************************
  */
 
@@ -17,7 +10,6 @@
  * @defgroup USER_CONFIG
  * @ingroup USER
  * @brief Custom server 1 (CUSTS1) profile database definitions.
- *
  * @{
  ****************************************************************************************
  */
@@ -26,7 +18,6 @@
  * INCLUDE FILES
  ****************************************************************************************
  */
-
 #include <stdint.h>
 #include "co_utils.h"
 #include "prf_types.h"
@@ -73,7 +64,6 @@ static const uint16_t att_desc_user_desc = ATT_DESC_CHAR_USER_DESCRIPTION;
  * GLOBAL VARIABLE DEFINITIONS
  ****************************************************************************************
  */
-
 const uint8_t custs1_services[]  = {SVC1_IDX_SVC, SVC2_IDX_SVC, SVC3_IDX_SVC, CUSTS1_IDX_NB};
 const uint8_t custs1_services_size = ARRAY_LEN(custs1_services) - 1;
 const uint16_t custs1_att_max_nb = CUSTS1_IDX_NB;
@@ -85,7 +75,6 @@ const struct attm_desc_128 custs1_att_db[CUSTS1_IDX_NB] =
      * Service 1 configuration
      *************************
      */
-
     // Service 1 Declaration
     [SVC1_IDX_SVC]                     = {(uint8_t*)&att_decl_svc, ATT_UUID_128_LEN, PERM(RD, ENABLE),
                                             sizeof(custs1_svc1), sizeof(custs1_svc1), (uint8_t*)&custs1_svc1},
@@ -123,6 +112,11 @@ const struct attm_desc_128 custs1_att_db[CUSTS1_IDX_NB] =
     // ADC Value 1 Characteristic Value
     [SVC1_IDX_ADC_VAL_1_VAL]           = {SVC1_ADC_VAL_1_UUID_128, ATT_UUID_128_LEN, PERM(RD, ENABLE) | PERM(NTF, ENABLE),
                                             DEF_SVC1_ADC_VAL_1_CHAR_LEN, 0, NULL},
+    // [SVC1_IDX_ADC_VAL_1_VAL]           = {SVC1_ADC_VAL_1_UUID_128, ATT_UUID_128_LEN, PERM(WR, ENABLE) | PERM(WRITE_REQ, ENABLE) | PERM(WRITE_COMMAND, ENABLE) | PERM(NTF, ENABLE),
+    //                                         DEF_SVC1_ADC_VAL_1_CHAR_LEN, 0, NULL},
+
+    // [SVC1_IDX_CONTROL_POINT_VAL]       = {SVC1_CTRL_POINT_UUID_128, ATT_UUID_128_LEN, PERM(WR, ENABLE) | PERM(WRITE_REQ, ENABLE) | PERM(WRITE_COMMAND, ENABLE) | PERM(NTF, ENABLE),
+    //                                         DEF_SVC1_CTRL_POINT_CHAR_LEN, 0, NULL},
 
     // ADC Value 1 Client Characteristic Configuration Descriptor
     [SVC1_IDX_ADC_VAL_1_NTF_CFG]       = {(uint8_t*)&att_desc_cfg, ATT_UUID_16_LEN, PERM(RD, ENABLE) | PERM(WR, ENABLE) | PERM(WRITE_REQ, ENABLE),
@@ -201,7 +195,6 @@ const struct attm_desc_128 custs1_att_db[CUSTS1_IDX_NB] =
      * Service 2 configuration
      *************************
      */
-
     // Service 2 Declaration
     [SVC2_IDX_SVC]                     = {(uint8_t*)&att_decl_svc, ATT_UUID_128_LEN, PERM(RD, ENABLE),
                                             sizeof(custs1_svc2), sizeof(custs1_svc2), (uint8_t*)&custs1_svc2},
@@ -234,9 +227,8 @@ const struct attm_desc_128 custs1_att_db[CUSTS1_IDX_NB] =
      * Service 3 configuration
      *************************
      */
-
     // Service 3 Declaration
-    [SVC3_IDX_SVC]                     = {(uint8_t*)&att_decl_svc, ATT_UUID_128_LEN, PERM(RD, ENABLE),
+    [SVC3_IDX_SVC]                     = {(uint8_t*)&att_decl_svc, ATT_UUID_128_LEN, PERM(WR, ENABLE),
                                             sizeof(custs1_svc3), sizeof(custs1_svc3), (uint8_t*)&custs1_svc3},
 
     // Read 1 Characteristic Declaration

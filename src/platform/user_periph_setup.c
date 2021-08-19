@@ -1,14 +1,7 @@
 /**
  ****************************************************************************************
- *
  * @file user_periph_setup.c
- *
  * @brief Peripherals setup and initialization.
- *
- * Copyright (C) 2015-2019 Dialog Semiconductor.
- * This computer program includes Confidential, Proprietary Information
- * of Dialog Semiconductor. All Rights Reserved.
- *
  ****************************************************************************************
  */
 
@@ -76,7 +69,6 @@ void set_pad_functions(void)
 #endif
 
 #if defined (CFG_PRINTF_UART2)
-    // Configure UART2 TX Pad
     GPIO_ConfigurePin(UART2_TX_PORT, UART2_TX_PIN, OUTPUT, PID_UART2_TX, false);
 #endif
 
@@ -112,7 +104,6 @@ void periph_init(void)
     SetBits16(CLK_16M_REG, XTAL16_BIAS_SH_ENABLE, 1);
 #endif
 
-    // ROM patch
     patch_func();
 
     // Initialize peripherals

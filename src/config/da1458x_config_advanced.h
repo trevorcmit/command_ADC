@@ -4,7 +4,6 @@
  * @brief Advanced compile configuration file.
  ****************************************************************************************
  */
-
 #ifndef _DA1458X_CONFIG_ADVANCED_H_
 #define _DA1458X_CONFIG_ADVANCED_H_
 
@@ -80,7 +79,7 @@
 /* Custom heap sizes                                                                                            */
 /****************************************************************************************************************/
 // #define DB_HEAP_SZ              1024
-#define DB_HEAP_SZ              4096
+#define DB_HEAP_SZ              8192
 // #define ENV_HEAP_SZ             4928
 // #define MSG_HEAP_SZ             6880
 // #define NON_RET_HEAP_SZ         2048
@@ -122,13 +121,10 @@
 #undef CFG_LOG_HEAP_USAGE
 
 /****************************************************************************************************************/
-/* Enables the BLE statistics measurement feature.                                                              */
+/* CFG_BLE_METRICS: Enables the BLE statistics measurement feature.                                                              */
+/* CFG_PRODUCTION_DEBUG_OUTPUT: Output the Hardfault arguments to serial/UART interface.                                                     */
 /****************************************************************************************************************/
 #undef CFG_BLE_METRICS
-
-/****************************************************************************************************************/
-/* Output the Hardfault arguments to serial/UART interface.                                                     */
-/****************************************************************************************************************/
 #undef CFG_PRODUCTION_DEBUG_OUTPUT
 
 /****************************************************************************************************************/
@@ -192,6 +188,7 @@
 /* size.                                                                                                        */
 /****************************************************************************************************************/
 #define CFG_RET_DATA_SIZE    (2048)
+// #define CFG_RET_DATA_SIZE    (4096)
 
 /****************************************************************************************************************/
 /* Maximum uninitialized retained data required by the application.                                             */
@@ -204,8 +201,7 @@
 /* data.                                                                                                        */
 /*     - CFG_RETAIN_RAM_1_BLOCK: if defined, the 1st RAM block must be retained.                                */
 /*     - CFG_RETAIN_RAM_2_BLOCK: if defined, the 2nd RAM block must be retained.                                */
-/*     - CFG_RETAIN_RAM_3_BLOCK: if defined, the 3rd RAM block must be retained.                                */
-/*                                                                                                              */
+/*     - CFG_RETAIN_RAM_3_BLOCK: if defined, the 3rd RAM block must be retained.                                */                                                                                                           
 /* If the CFG_CUSTOM_SCATTER_FILE flag is undefined, the system knows which blocks to retain based on the       */
 /* default SDK scatter file.                                                                                    */
 /****************************************************************************************************************/
@@ -216,10 +212,9 @@
     #define CFG_RETAIN_RAM_3_BLOCK
 #endif
 
-/****************************************************************************************************************/
-/* Code location selection.                                                                                     */
-/*     - CFG_CODE_LOCATION_EXT: Code is loaded from SPI flash / I2C EEPROM / UART                               */
-/*     - CFG_CODE_LOCATION_OTP: Code is burned in the OTP                                                       */
+/****************************************************************************************************************/                                                                                
+/* - CFG_CODE_LOCATION_EXT: Code is loaded from SPI flash / I2C EEPROM / UART                                   */
+/* - CFG_CODE_LOCATION_OTP: Code is burned in the OTP                                                           */
 /* The above options are mutually exclusive and exactly one of them must be enabled.                            */
 /****************************************************************************************************************/
 #define CFG_CODE_LOCATION_EXT
@@ -245,8 +240,6 @@
 
 
 #else
-
-
 
 /****************************************************************************************************************/
 /* Low Power clock selection.                                                                                   */

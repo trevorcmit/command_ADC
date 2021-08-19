@@ -85,8 +85,7 @@ void user_svc1_long_val_cfg_ind_handler(ke_msg_id_t const msgid,
                                            ke_task_id_t const dest_id,
                                            ke_task_id_t const src_id)
 {
-    // Generate indication when the central subscribes to it
-    if (param->value[0])
+    if (param->value[0]) // Generate indication when the central subscribes to it
     {
         uint8_t conidx = KE_IDX_GET(src_id);
 
@@ -207,10 +206,10 @@ void app_adcval1_timer_cb_handler()
     sprintf(sample, "%d", output);                  // Add first ADC reading to array
 
     int i;
-    for (i = 1; i<=15; i++) {
+    for (i = 1; i<=35; i++) {
         uint16_t result0 = gpadc_read();                  // Get uint16_t ADC reading
         int output0 = (int) gpadc_sample_to_mv(result0);  // Turn into integer
-        char sample0[8];                                  // Get enough space to store value
+        char sample0[4];                                  // Get enough space to store value
         sprintf(sample0, "%d", output0);                  // Convert ADC reading to array format
         strcat(sample, sample0);                          // Concatenate ADC reading onto ongoing list
     }

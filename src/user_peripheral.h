@@ -1,14 +1,7 @@
 /**
  ****************************************************************************************
- *
  * @file user_peripheral_proj.h
- *
  * @brief Peripheral project header file.
- *
- * Copyright (C) 2015-2019 Dialog Semiconductor.
- * This computer program includes Confidential, Proprietary Information
- * of Dialog Semiconductor. All Rights Reserved.
- *
  ****************************************************************************************
  */
 
@@ -19,9 +12,7 @@
  ****************************************************************************************
  * @addtogroup APP
  * @ingroup RICOW
- *
  * @brief
- *
  * @{
  ****************************************************************************************
  */
@@ -30,7 +21,6 @@
  * INCLUDE FILES
  ****************************************************************************************
  */
-
 #include "rwble_config.h"
 #include "app_task.h"                  // application task
 #include "gapc_task.h"                 // gap functions and messages
@@ -126,5 +116,4 @@ void user_catch_rest_hndl(ke_msg_id_t const msgid,
                           ke_task_id_t const src_id);
 
 /// @} APP
-
 #endif // _USER_PERIPHERAL_H_

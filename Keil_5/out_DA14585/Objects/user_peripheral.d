@@ -85,6 +85,8 @@
 .\out_da14585\objects\user_peripheral.o: .\..\..\..\..\..\sdk\ble_stack\profiles\prf_types.h
 .\out_da14585\objects\user_peripheral.o: .\..\..\..\..\..\sdk\ble_stack\profiles\prf.h
 .\out_da14585\objects\user_peripheral.o: .\..\..\..\..\..\sdk\app_modules\api\app_adv_data.h
+.\out_da14585\objects\user_peripheral.o: .\..\..\..\..\..\sdk\platform\core_modules\arch_console\arch_console.h
+.\out_da14585\objects\user_peripheral.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 .\out_da14585\objects\user_peripheral.o: ..\src\user_peripheral.h
 .\out_da14585\objects\user_peripheral.o: .\..\..\..\..\..\sdk\app_modules\api\app_task.h
 .\out_da14585\objects\user_peripheral.o: .\..\..\..\..\..\sdk\app_modules\api\app_callback.h
@@ -93,3 +95,6 @@
 .\out_da14585\objects\user_peripheral.o: .\..\..\..\..\..\sdk\platform\arch\compiler\compiler.h
 .\out_da14585\objects\user_peripheral.o: .\..\..\..\..\..\sdk\ble_stack\host\att\attm\attm_db_128.h
 .\out_da14585\objects\user_peripheral.o: .\..\src\custom_profile\user_custs1_def.h
+.\out_da14585\objects\user_peripheral.o: .\..\..\..\..\..\sdk\platform\driver\adc\adc.h
+.\out_da14585\objects\user_peripheral.o: .\..\..\..\..\..\sdk\platform\driver\adc\adc_58x.h
+.\out_da14585\objects\user_peripheral.o: .\..\..\..\..\..\sdk\platform\driver\adc\adc_531.h

@@ -63,9 +63,9 @@ void user_svc1_ctrl_wr_ind_handler(ke_msg_id_t const msgid,
 }
 
 void user_svc1_led_wr_ind_handler(ke_msg_id_t const msgid,
-                                     struct custs1_val_write_ind const *param,
-                                     ke_task_id_t const dest_id,
-                                     ke_task_id_t const src_id)
+                                  struct custs1_val_write_ind const *param,
+                                  ke_task_id_t const dest_id,
+                                  ke_task_id_t const src_id)
 {
     uint8_t val = 0;
     memcpy(&val, &param->value[0], param->length);
@@ -81,9 +81,9 @@ void user_svc1_led_wr_ind_handler(ke_msg_id_t const msgid,
 }
 
 void user_svc1_long_val_cfg_ind_handler(ke_msg_id_t const msgid,
-                                           struct custs1_val_write_ind const *param,
-                                           ke_task_id_t const dest_id,
-                                           ke_task_id_t const src_id)
+                                        struct custs1_val_write_ind const *param,
+                                        ke_task_id_t const dest_id,
+                                        ke_task_id_t const src_id)
 {
     if (param->value[0]) // Generate indication when the central subscribes to it
     {
@@ -205,12 +205,47 @@ void app_adcval1_timer_cb_handler()
     char sample[250];                               // Initialize array to send
     sprintf(sample, "%d", output);                  // Add first ADC reading to array
 
+    // if (sizeof(sample) == 2);
+    // {
+    //     sample[1] = ' ';
+    // }
+    // if (sizeof(sample) == 3);
+    // {
+    //     sample[2] = ' ';
+    // }
+    // if (sizeof(sample) == 4);
+    // {
+    //     sample[3] = ' ';
+    // }
+    // if (sizeof(sample) == 5);
+    // {
+    //     sample[4] = ' ';
+    // }
+
     int i;
-    for (i = 1; i<=35; i++) {
+    for (i = 1; i<=22; i++) {
         uint16_t result0 = gpadc_read();                  // Get uint16_t ADC reading
         int output0 = (int) gpadc_sample_to_mv(result0);  // Turn into integer
         char sample0[4];                                  // Get enough space to store value
         sprintf(sample0, "%d", output0);                  // Convert ADC reading to array format
+        
+        // if (sizeof(sample0) == 2);
+        // {
+        //     sample0[1] = ' ';
+        // }
+        // if (sizeof(sample0) == 3);
+        // {
+        //     sample0[2] = ' ';
+        // }
+        // if (sizeof(sample0) == 4);
+        // {
+        //     sample0[3] = ' ';
+        // }
+        // if (sizeof(sample0) == 5);
+        // {
+        //     sample0[4] = ' ';
+        // }
+
         strcat(sample, sample0);                          // Concatenate ADC reading onto ongoing list
     }
 
@@ -218,8 +253,10 @@ void app_adcval1_timer_cb_handler()
     //req->conhdl = app_env->conhdl;
     req->handle = SVC1_IDX_ADC_VAL_1_VAL;
     req->length = DEF_SVC1_ADC_VAL_1_CHAR_LEN;
+    // req->length = sample_len;
     req->notification = true;
     memcpy(req->value, &sample[0], DEF_SVC1_ADC_VAL_1_CHAR_LEN);
+    // memcpy(req->value, &sample[0], sample_len);
 
     ke_msg_send(req);
 
@@ -275,7 +312,6 @@ static uint16_t gpadc_read(void)
 
     return (result);
 }
-
 
 static uint16_t gpadc_sample_to_mv(uint16_t sample)
 {

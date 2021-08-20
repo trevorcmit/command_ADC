@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\out_DA14531\Objects\ble_app_peripheral_531.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\out_DA14531\Objects\ble_app_peripheral_531.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Fri Aug 20 13:16:07 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Fri Aug 20 15:59:01 2021
 <BR><P>
 <H3>Maximum Stack Usage =        352 bytes + Unknown(Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -51,7 +51,7 @@ Function Pointers
  <LI><a href="#[16]">WKUP_QUADEC_Handler</a> from wkupct_quadec.o(.text) referenced from startup_da14531.o(RESET)
  <LI><a href="#[1a]">XTAL32M_RDY_Handler</a> from startup_da14531.o(.text) referenced from startup_da14531.o(RESET)
  <LI><a href="#[20]">__main</a> from entry.o(.ARM.Collect$$$$00000000) referenced from startup_da14531.o(.text)
- <LI><a href="#[30]">_sputc</a> from printf5.o(i._sputc) referenced from printf5.o(i.__0sprintf$5)
+ <LI><a href="#[30]">_sputc</a> from printf1.o(i._sputc) referenced from printf1.o(i.__0sprintf$1)
  <LI><a href="#[2e]">adv_data_update_timer_cb</a> from user_peripheral.o(.text) referenced from user_peripheral.o(.text)
  <LI><a href="#[2d]">app_adcval1_timer_cb_handler</a> from user_custs1_impl.o(.text) referenced from user_custs1_impl.o(.text)
  <LI><a href="#[ab]">app_custs1_create_db</a> from app_customs.o(.text) referenced from user_custs_config.o(.constdata)
@@ -565,6 +565,7 @@ Global Symbols
 <LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_correction_apply
 <LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lld_sleep_us_2_lpcycles_rcx_func
 <LI><a href="#[2a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rf_rssi_convert
+<LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
 <P><STRONG><a name="[109]"></a>__aeabi_idivmod</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE))
@@ -759,7 +760,6 @@ Global Symbols
 
 <P><STRONG><a name="[c8]"></a>__aeabi_uldivmod</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE))
 <BR><BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_rcx_freq
-<LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
 <P><STRONG><a name="[158]"></a>app_db_init_start</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE))
@@ -1970,7 +1970,7 @@ Global Symbols
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arch_resume_from_sleep
 </UL>
 
-<P><STRONG><a name="[2d]"></a>app_adcval1_timer_cb_handler</STRONG> (Thumb, 130 bytes, Stack size 272 bytes, user_custs1_impl.o(.text))
+<P><STRONG><a name="[2d]"></a>app_adcval1_timer_cb_handler</STRONG> (Thumb, 142 bytes, Stack size 272 bytes, user_custs1_impl.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 352<LI>Call Chain = app_adcval1_timer_cb_handler &rArr; gpadc_read &rArr; adc_offset_calibrate &rArr; adc_init &rArr; adc_configure
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
@@ -2180,14 +2180,14 @@ Global Symbols
 
 <P><STRONG><a name="[1e0]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
-<P><STRONG><a name="[18a]"></a>__0sprintf$5</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, printf5.o(i.__0sprintf$5), UNUSED)
+<P><STRONG><a name="[18a]"></a>__0sprintf$1</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, printf1.o(i.__0sprintf$1), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sputc
 <LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[1e1]"></a>__1sprintf$5</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf5.o(i.__0sprintf$5), UNUSED)
+<P><STRONG><a name="[1e1]"></a>__1sprintf$1</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf1.o(i.__0sprintf$1), UNUSED)
 
-<P><STRONG><a name="[175]"></a>__2sprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf5.o(i.__0sprintf$5))
+<P><STRONG><a name="[175]"></a>__2sprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf1.o(i.__0sprintf$1))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2sprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_adcval1_timer_cb_handler
@@ -2594,16 +2594,16 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_app_adv_start
 </UL>
 
-<P><STRONG><a name="[18b]"></a>_printf_core</STRONG> (Thumb, 680 bytes, Stack size 96 bytes, printf5.o(i._printf_core), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
+<P><STRONG><a name="[18b]"></a>_printf_core</STRONG> (Thumb, 332 bytes, Stack size 88 bytes, printf1.o(i._printf_core), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0sprintf$5
+<BR>[Called By]<UL><LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0sprintf$1
 </UL>
 
-<P><STRONG><a name="[30]"></a>_sputc</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, printf5.o(i._sputc))
-<BR><BR>[Called By]<UL><LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0sprintf$5
+<P><STRONG><a name="[30]"></a>_sputc</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, printf1.o(i._sputc))
+<BR><BR>[Called By]<UL><LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0sprintf$1
 </UL>
-<BR>[Address Reference Count : 1]<UL><LI> printf5.o(i.__0sprintf$5)
+<BR>[Address Reference Count : 1]<UL><LI> printf1.o(i.__0sprintf$1)
 </UL><P>
 <H3>
 Undefined Global Symbols

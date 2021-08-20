@@ -105,65 +105,65 @@ void user_svc1_long_val_cfg_ind_handler(ke_msg_id_t const msgid,
 }
 
 void user_svc1_long_val_wr_ind_handler(ke_msg_id_t const msgid,
-                                          struct custs1_val_write_ind const *param,
-                                          ke_task_id_t const dest_id,
-                                          ke_task_id_t const src_id)
+                                       struct custs1_val_write_ind const *param,
+                                       ke_task_id_t const dest_id,
+                                       ke_task_id_t const src_id)
 {
 }
 
 void user_svc1_long_val_ntf_cfm_handler(ke_msg_id_t const msgid,
-                                           struct custs1_val_write_ind const *param,
-                                           ke_task_id_t const dest_id,
-                                           ke_task_id_t const src_id)
+                                        struct custs1_val_write_ind const *param,
+                                        ke_task_id_t const dest_id,
+                                        ke_task_id_t const src_id)
 {
 }
 
 void user_svc1_adc_val_1_cfg_ind_handler(ke_msg_id_t const msgid,
-                                            struct custs1_val_write_ind const *param,
-                                            ke_task_id_t const dest_id,
-                                            ke_task_id_t const src_id)
+                                         struct custs1_val_write_ind const *param,
+                                         ke_task_id_t const dest_id,
+                                         ke_task_id_t const src_id)
 {
 }
 
 void user_svc1_adc_val_1_ntf_cfm_handler(ke_msg_id_t const msgid,
+                                         struct custs1_val_write_ind const *param,
+                                         ke_task_id_t const dest_id,
+                                         ke_task_id_t const src_id)
+{
+}
+
+void user_svc1_button_cfg_ind_handler(ke_msg_id_t const msgid,
+                                      struct custs1_val_write_ind const *param,
+                                      ke_task_id_t const dest_id,
+                                      ke_task_id_t const src_id)
+{
+}
+
+void user_svc1_button_ntf_cfm_handler(ke_msg_id_t const msgid,
+                                      struct custs1_val_write_ind const *param,
+                                      ke_task_id_t const dest_id,
+                                      ke_task_id_t const src_id)
+{
+}
+
+void user_svc1_indicateable_cfg_ind_handler(ke_msg_id_t const msgid,
                                             struct custs1_val_write_ind const *param,
                                             ke_task_id_t const dest_id,
                                             ke_task_id_t const src_id)
 {
 }
 
-void user_svc1_button_cfg_ind_handler(ke_msg_id_t const msgid,
-                                         struct custs1_val_write_ind const *param,
-                                         ke_task_id_t const dest_id,
-                                         ke_task_id_t const src_id)
-{
-}
-
-void user_svc1_button_ntf_cfm_handler(ke_msg_id_t const msgid,
-                                         struct custs1_val_write_ind const *param,
-                                         ke_task_id_t const dest_id,
-                                         ke_task_id_t const src_id)
-{
-}
-
-void user_svc1_indicateable_cfg_ind_handler(ke_msg_id_t const msgid,
-                                               struct custs1_val_write_ind const *param,
-                                               ke_task_id_t const dest_id,
-                                               ke_task_id_t const src_id)
-{
-}
-
 void user_svc1_indicateable_ind_cfm_handler(ke_msg_id_t const msgid,
-                                               struct custs1_val_write_ind const *param,
-                                               ke_task_id_t const dest_id,
-                                               ke_task_id_t const src_id)
+                                            struct custs1_val_write_ind const *param,
+                                            ke_task_id_t const dest_id,
+                                            ke_task_id_t const src_id)
 {
 }
 
 void user_svc1_long_val_att_info_req_handler(ke_msg_id_t const msgid,
-                                                struct custs1_att_info_req const *param,
-                                                ke_task_id_t const dest_id,
-                                                ke_task_id_t const src_id)
+                                             struct custs1_att_info_req const *param,
+                                             ke_task_id_t const dest_id,
+                                             ke_task_id_t const src_id)
 {
     struct custs1_att_info_rsp *rsp = KE_MSG_ALLOC(CUSTS1_ATT_INFO_RSP,
                                                    src_id,
@@ -177,9 +177,9 @@ void user_svc1_long_val_att_info_req_handler(ke_msg_id_t const msgid,
 }
 
 void user_svc1_rest_att_info_req_handler(ke_msg_id_t const msgid,
-                                            struct custs1_att_info_req const *param,
-                                            ke_task_id_t const dest_id,
-                                            ke_task_id_t const src_id)
+                                         struct custs1_att_info_req const *param,
+                                         ke_task_id_t const dest_id,
+                                         ke_task_id_t const src_id)
 {
     struct custs1_att_info_rsp *rsp = KE_MSG_ALLOC(CUSTS1_ATT_INFO_RSP,
                                                    src_id,
@@ -215,7 +215,6 @@ void app_adcval1_timer_cb_handler()
     }
 
     // size_t sample_len = sizeof(sample)/sizeof(sample[0]);
-
     //req->conhdl = app_env->conhdl;
     req->handle = SVC1_IDX_ADC_VAL_1_VAL;
     req->length = DEF_SVC1_ADC_VAL_1_CHAR_LEN;
@@ -232,9 +231,9 @@ void app_adcval1_timer_cb_handler()
 }
 
 void user_svc3_read_non_db_val_handler(ke_msg_id_t const msgid,
-                                           struct custs1_value_req_ind const *param,
-                                           ke_task_id_t const dest_id,
-                                           ke_task_id_t const src_id)
+                                       struct custs1_value_req_ind const *param,
+                                       ke_task_id_t const dest_id,
+                                       ke_task_id_t const src_id)
 {
     // Increase value by one
     non_db_val_counter++;

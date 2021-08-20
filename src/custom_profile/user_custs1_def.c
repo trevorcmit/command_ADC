@@ -112,11 +112,6 @@ const struct attm_desc_128 custs1_att_db[CUSTS1_IDX_NB] =
     // ADC Value 1 Characteristic Value
     [SVC1_IDX_ADC_VAL_1_VAL]           = {SVC1_ADC_VAL_1_UUID_128, ATT_UUID_128_LEN, PERM(RD, ENABLE) | PERM(NTF, ENABLE),
                                             DEF_SVC1_ADC_VAL_1_CHAR_LEN, 0, NULL},
-    // [SVC1_IDX_ADC_VAL_1_VAL]           = {SVC1_ADC_VAL_1_UUID_128, ATT_UUID_128_LEN, PERM(WR, ENABLE) | PERM(WRITE_REQ, ENABLE) | PERM(WRITE_COMMAND, ENABLE) | PERM(NTF, ENABLE),
-    //                                         DEF_SVC1_ADC_VAL_1_CHAR_LEN, 0, NULL},
-
-    // [SVC1_IDX_CONTROL_POINT_VAL]       = {SVC1_CTRL_POINT_UUID_128, ATT_UUID_128_LEN, PERM(WR, ENABLE) | PERM(WRITE_REQ, ENABLE) | PERM(WRITE_COMMAND, ENABLE) | PERM(NTF, ENABLE),
-    //                                         DEF_SVC1_CTRL_POINT_CHAR_LEN, 0, NULL},
 
     // ADC Value 1 Client Characteristic Configuration Descriptor
     [SVC1_IDX_ADC_VAL_1_NTF_CFG]       = {(uint8_t*)&att_desc_cfg, ATT_UUID_16_LEN, PERM(RD, ENABLE) | PERM(WR, ENABLE) | PERM(WRITE_REQ, ENABLE),

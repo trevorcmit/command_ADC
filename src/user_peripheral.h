@@ -28,7 +28,6 @@
 #include "app.h"                       // application definitions
 #include "co_error.h"                  // error code definitions
 #include "arch_wdg.h"
-
 #include "app_callback.h"
 #include "app_default_handlers.h"
 

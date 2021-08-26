@@ -179,7 +179,7 @@ static const struct advertise_configuration user_adv_conf = {
  */
 /// Device name
 // #define USER_DEVICE_NAME        "DLG-PRPH"
-#define USER_DEVICE_NAME        "IFM Fiber"
+#define USER_DEVICE_NAME        "DLG-PRPH"
 
 /// Device name length
 #define USER_DEVICE_NAME_LEN    (sizeof(USER_DEVICE_NAME)-1)
@@ -198,7 +198,7 @@ static const struct gapm_configuration user_gapm_conf = {
     /// Maximal MTU. Shall be set to 23 if Legacy Pairing is used, 65 if Secure Connection is used,
     /// more if required by the application
     // .max_mtu = 23,
-    .max_mtu = 95,
+    .max_mtu = 183, 
 
     /// Device Address Type
     .addr_type = APP_CFG_ADDR_TYPE(USER_CFG_ADDRESS_MODE),

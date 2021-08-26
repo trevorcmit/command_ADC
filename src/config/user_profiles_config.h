@@ -13,7 +13,6 @@
  * @defgroup APP_CONFIG
  * @ingroup APP
  * @brief  Application configuration file
- * This file contains the configuration of the profiles used by the application.
  * @{
  ****************************************************************************************
  */

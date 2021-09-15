@@ -28,7 +28,6 @@
  * LOCAL VARIABLE DEFINITIONS
  ****************************************************************************************
  */
-
 // Service 1 of the custom server 1
 static const att_svc_desc128_t custs1_svc1                      = DEF_SVC1_UUID_128;
 

@@ -1,14 +1,7 @@
 /**
  ****************************************************************************************
- *
  * @file user_custs1_impl.h
- *
  * @brief Peripheral project Custom1 Server implementation header file.
- *
- * Copyright (C) 2015-2019 Dialog Semiconductor.
- * This computer program includes Confidential, Proprietary Information
- * of Dialog Semiconductor. All Rights Reserved.
- *
  ****************************************************************************************
  */
 
@@ -19,9 +12,7 @@
  ****************************************************************************************
  * @addtogroup APP
  * @ingroup RICOW
- *
  * @brief
- *
  * @{
  ****************************************************************************************
  */
@@ -47,7 +38,6 @@ enum
  * INCLUDE FILES
  ****************************************************************************************
  */
-
 #include "gapc_task.h"                 // gap functions and messages
 #include "gapm_task.h"                 // gap functions and messages
 #include "custs1_task.h"

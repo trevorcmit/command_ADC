@@ -50,7 +50,7 @@ void user_svc1_ctrl_wr_ind_handler(ke_msg_id_t const msgid,
     if (val != CUSTS1_CP_ADC_VAL1_DISABLE)
     {
         // timer_used = app_easy_timer(APP_PERIPHERAL_CTRL_TIMER_DELAY, app_adcval1_timer_cb_handler);
-        timer_used = app_easy_timer(5, app_adcval1_timer_cb_handler);
+        timer_used = app_easy_timer(10, app_adcval1_timer_cb_handler);
     }
     else
     {
@@ -206,7 +206,7 @@ void app_adcval1_timer_cb_handler()
     sprintf(sample, "%d", output);                         // Add first ADC reading to array
 
     int i;
-    for (i = 1; i<=57; i++) {
+    for (i = 1; i<=40; i++) {
         uint16_t result0 = gpadc_read();                  // Get uint16_t ADC reading
         int output0 = (int) gpadc_sample_to_mv(result0);  // Turn into integer
         char sample0[4];                                  // Get enough space to store value
@@ -225,7 +225,7 @@ void app_adcval1_timer_cb_handler()
 
     if (ke_state_get(TASK_APP) == APP_CONNECTED)
     {
-        timer_used = app_easy_timer(5, app_adcval1_timer_cb_handler);
+        timer_used = app_easy_timer(10, app_adcval1_timer_cb_handler);
     }
 }
 

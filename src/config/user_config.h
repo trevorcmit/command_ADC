@@ -25,9 +25,7 @@
 
 /*
  ****************************************************************************************
- *
  * Privacy / Addressing configuration
- *
  ****************************************************************************************
  */
 
@@ -60,9 +58,7 @@
 
 /******************************************
  * Default sleep mode. Possible values are:
- * - ARCH_SLEEP_OFF
- * - ARCH_EXT_SLEEP_ON
- * - ARCH_EXT_SLEEP_OTP_COPY_ON
+ * - ARCH_SLEEP_OFF, ARCH_EXT_SLEEP_ON, ARCH_EXT_SLEEP_OTP_COPY_ON
  ******************************************
  */
 // static const sleep_state_t app_default_sleep_mode = ARCH_SLEEP_OFF;
@@ -98,7 +94,6 @@ static const struct advertise_configuration user_adv_conf = {
      * Advertising information
      *************************
      */
-
     /// Host information advertising data (GAPM_ADV_NON_CONN and GAPM_ADV_UNDIRECT)
     /// Advertising mode :
     /// - GAP_NON_DISCOVERABLE: Non discoverable mode
@@ -125,7 +120,6 @@ static const struct advertise_configuration user_adv_conf = {
 
 /*
  ****************************************************************************************
- *
  * Advertising or scan response data for the following cases:
  *
  * - ADV_IND: Connectable undirected advertising event.
@@ -167,18 +161,15 @@ static const struct advertise_configuration user_adv_conf = {
 
 /*
  ****************************************************************************************
- *
  * Device name.
  *
  * - If there is space left in the advertising or scan response data the device name is
  *   copied there. The device name can be anytime read by a connected peer, if the
  *   application supports it.
  * - The Bluetooth device name can be up to 248 bytes.
- *
  ****************************************************************************************
  */
 /// Device name
-// #define USER_DEVICE_NAME        "DLG-PRPH"
 #define USER_DEVICE_NAME        "DLG-PRPH"
 
 /// Device name length
@@ -186,9 +177,7 @@ static const struct advertise_configuration user_adv_conf = {
 
 /*
  ****************************************************************************************
- *
  * GAPM configuration
- *
  ****************************************************************************************
  */
 static const struct gapm_configuration user_gapm_conf = {
@@ -209,7 +198,6 @@ static const struct gapm_configuration user_gapm_conf = {
      * Privacy configuration
      ***********************
      */
-
     /// Random Static address
     // NOTE: The address shall comply with the following requirements:
     // - the two most significant bits of the address shall be equal to 1,
@@ -226,7 +214,6 @@ static const struct gapm_configuration user_gapm_conf = {
      * ATT database configuration
      ****************************
      */
-
     /// Attribute database configuration (@see enum gapm_att_cfg_flag)
     ///    7     6    5     4     3    2    1    0
     /// +-----+-----+----+-----+-----+----+----+----+
@@ -239,18 +226,13 @@ static const struct gapm_configuration user_gapm_conf = {
     /// - Bit [6]  : Reserved
     /// - Bit [7]  : Enable Debug Mode
     .att_cfg = GAPM_MASK_ATT_SVC_CHG_EN,
-
-    /// GAP service start handle
-    .gap_start_hdl = 0,
-
-    /// GATT service start handle
-    .gatt_start_hdl = 0,
+    .gap_start_hdl = 0,    /// GAP service start handle
+    .gatt_start_hdl = 0,   /// GATT service start handle
 
     /**************************************************
      * Data packet length extension configuration (4.2)
      **************************************************
      */
-
     /// Maximal MPS
     .max_mps = 0,
 

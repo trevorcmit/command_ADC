@@ -18,7 +18,6 @@
  * INCLUDE FILES
  ****************************************************************************************
  */
-
 #include "app_prf_types.h"
 #include "app_customs.h"
 #include "user_custs1_def.h"
@@ -27,7 +26,6 @@
  * GLOBAL VARIABLE DEFINITIONS
  ****************************************************************************************
  */
-
 #if (BLE_CUSTOM1_SERVER)
 extern const struct attm_desc_128 custs1_att_db[CUSTS1_IDX_NB];
 #endif

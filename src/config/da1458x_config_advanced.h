@@ -253,7 +253,7 @@
 /****************************************************************************************************************/
 /* Periodic wakeup period if GTL iface is not enabled. Time in msec.                                            */
 /****************************************************************************************************************/
-#define CFG_MAX_SLEEP_DURATION_EXTERNAL_WAKEUP_MS              600000  // 600s
+#define CFG_MAX_SLEEP_DURATION_EXTERNAL_WAKEUP_MS              600000   // 600s
 
 /****************************************************************************************************************/
 /* Wakeup from external processor running host application.                                                     */

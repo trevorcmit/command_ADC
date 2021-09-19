@@ -4,7 +4,6 @@
  * @brief User configuration file.
  ****************************************************************************************
  */
-
 #ifndef _USER_CONFIG_H_
 #define _USER_CONFIG_H_
 
@@ -22,13 +21,11 @@
  * DEFINES
  ****************************************************************************************
  */
-
 /*
  ****************************************************************************************
  * Privacy / Addressing configuration
  ****************************************************************************************
  */
-
 /*************************************************************************
  * Privacy Capabilities and address configuration of local device:
  * - APP_CFG_ADDR_PUB               No Privacy, Public BDA
@@ -66,9 +63,7 @@ static const sleep_state_t app_default_sleep_mode = ARCH_EXT_SLEEP_ON;
 
 /*
  ****************************************************************************************
- *
  * Advertising configuration
- *
  ****************************************************************************************
  */
 static const struct advertise_configuration user_adv_conf = {
@@ -121,20 +116,17 @@ static const struct advertise_configuration user_adv_conf = {
 /*
  ****************************************************************************************
  * Advertising or scan response data for the following cases:
- *
  * - ADV_IND: Connectable undirected advertising event.
  *    - The maximum length of the user defined advertising data shall be 28 bytes.
  *    - The Flags data type are written by the related ROM function, hence the user shall
  *      not include them in the advertising data. The related ROM function adds 3 bytes in
  *      the start of the advertising data that are to be transmitted over the air.
  *    - The maximum length of the user defined response data shall be 31 bytes.
- *
  * - ADV_NONCONN_IND: Non-connectable undirected advertising event.
  *    - The maximum length of the user defined advertising data shall be 31 bytes.
  *    - The Flags data type may be omitted, hence the user can use all the 31 bytes for
  *      data.
  *    - The scan response data shall be empty.
- *
  * - ADV_SCAN_IND: Scannable undirected advertising event.
  *    - The maximum length of the user defined advertising data shall be 31 bytes.
  *    - The Flags data type may be omitted, hence the user can use all the 31 bytes for
@@ -162,7 +154,6 @@ static const struct advertise_configuration user_adv_conf = {
 /*
  ****************************************************************************************
  * Device name.
- *
  * - If there is space left in the advertising or scan response data the device name is
  *   copied there. The device name can be anytime read by a connected peer, if the
  *   application supports it.
@@ -170,10 +161,10 @@ static const struct advertise_configuration user_adv_conf = {
  ****************************************************************************************
  */
 /// Device name
-#define USER_DEVICE_NAME        "DLG-PRPH"
+#define USER_DEVICE_NAME        "IFM-Fiber"
 
 /// Device name length
-#define USER_DEVICE_NAME_LEN    (sizeof(USER_DEVICE_NAME)-1)
+#define USER_DEVICE_NAME_LEN    (sizeof(USER_DEVICE_NAME) - 1)
 
 /*
  ****************************************************************************************
@@ -245,9 +236,7 @@ static const struct gapm_configuration user_gapm_conf = {
 
 /*
  ****************************************************************************************
- *
  * Parameter update configuration
- *
  ****************************************************************************************
  */
 static const struct connection_param_configuration user_connection_param_conf = {
@@ -277,9 +266,7 @@ static const struct connection_param_configuration user_connection_param_conf = 
 
 /*
  ****************************************************************************************
- *
  * Default handlers configuration (applies only for @app_default_handlers.c)
- *
  ****************************************************************************************
  */
 static const struct default_handlers_configuration  user_default_hnd_conf = {
@@ -304,9 +291,7 @@ static const struct default_handlers_configuration  user_default_hnd_conf = {
 
 /*
  ****************************************************************************************
- *
  * Central configuration (not used by current example)
- *
  ****************************************************************************************
  */
 static const struct central_configuration user_central_conf = {
@@ -401,9 +386,7 @@ static const struct central_configuration user_central_conf = {
 
 /*
  ****************************************************************************************
- *
  * Security related configuration
- *
  ****************************************************************************************
  */
 static const struct security_configuration user_security_conf = {
@@ -456,5 +439,4 @@ static const struct security_configuration user_security_conf = {
     .sec_req        = GAP_NO_SEC,
     #endif
 };
-
 #endif // _USER_CONFIG_H_

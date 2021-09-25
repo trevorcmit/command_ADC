@@ -3,11 +3,11 @@
 <title>Static Call Graph - [.\out_DA14531\Objects\ble_app_peripheral_531.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\out_DA14531\Objects\ble_app_peripheral_531.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Sun Sep 19 00:23:30 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Mon Sep 20 00:33:46 2021
 <BR><P>
-<H3>Maximum Stack Usage =        264 bytes + Unknown(Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        120 bytes + Unknown(Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-app_adcval1_timer_cb_handler &rArr; gpadc_read &rArr; adc_offset_calibrate &rArr; adc_init &rArr; adc_configure
+main &rArr; system_init &rArr; periph_init &rArr; set_pad_functions &rArr; GPIO_ConfigurePin &rArr; GPIO_SetPinFunction
 <P>
 <H3>
 Function Pointers
@@ -208,16 +208,16 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rwble_isr
 </UL>
 
-<P><STRONG><a name="[188]"></a>smpc_pdu_recv</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE))
+<P><STRONG><a name="[185]"></a>smpc_pdu_recv</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE))
 <BR><BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;JT_l2cc_pdu_recv_ind_handler_func
 </UL>
 
 <P><STRONG><a name="[8]"></a>UART_Handler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE), UNUSED)
 <BR>[Address Reference Count : 1]<UL><LI> startup_da14531.o(RESET)
 </UL>
-<P><STRONG><a name="[173]"></a>prf_get_task_from_id</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE))
-<BR><BR>[Called By]<UL><LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc3_read_non_db_val_handler
-<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_long_val_cfg_ind_handler
+<P><STRONG><a name="[171]"></a>prf_get_task_from_id</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE))
+<BR><BR>[Called By]<UL><LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc3_read_non_db_val_handler
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_long_val_cfg_ind_handler
 <LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_adcval1_timer_cb_handler
 </UL>
 
@@ -256,11 +256,11 @@ Global Symbols
 <P><STRONG><a name="[74]"></a>lld_data_tx_prog_func</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE), UNUSED)
 <BR>[Address Reference Count : 1]<UL><LI> jump_table.o(.constdata)
 </UL>
-<P><STRONG><a name="[185]"></a>lld_evt_elt_insert</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE))
+<P><STRONG><a name="[182]"></a>lld_evt_elt_insert</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE))
 <BR><BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;JT_lld_test_mode_rx_func
 </UL>
 
-<P><STRONG><a name="[183]"></a>lld_evt_adv_create</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE))
+<P><STRONG><a name="[180]"></a>lld_evt_adv_create</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE))
 <BR><BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;JT_lld_test_mode_rx_func
 </UL>
 
@@ -280,7 +280,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rwip_sleep
 </UL>
 
-<P><STRONG><a name="[184]"></a>lld_util_freq2chnl</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE))
+<P><STRONG><a name="[181]"></a>lld_util_freq2chnl</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE))
 <BR><BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;JT_lld_test_mode_rx_func
 </UL>
 
@@ -405,11 +405,11 @@ Global Symbols
 <P><STRONG><a name="[5a]"></a>smpc_pdu_recv_func</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE), UNUSED)
 <BR>[Address Reference Count : 1]<UL><LI> jump_table.o(.constdata)
 </UL>
-<P><STRONG><a name="[186]"></a>gapc_lecnx_check_rx</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE))
+<P><STRONG><a name="[183]"></a>gapc_lecnx_check_rx</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE))
 <BR><BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;JT_l2cc_pdu_unpack_func
 </UL>
 
-<P><STRONG><a name="[187]"></a>l2cc_pdu_recv_ind_handler_func</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE))
+<P><STRONG><a name="[184]"></a>l2cc_pdu_recv_ind_handler_func</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE))
 <BR><BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;JT_l2cc_pdu_recv_ind_handler_func
 </UL>
 
@@ -438,7 +438,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rwip_sleep
 </UL>
 
-<P><STRONG><a name="[1b5]"></a>ke_event_flush</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE), UNUSED)
+<P><STRONG><a name="[1b2]"></a>ke_event_flush</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE), UNUSED)
 <BR><BR>[Called By]<UL></UL>
 
 <P><STRONG><a name="[bc]"></a>ke_mem_init</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE))
@@ -468,10 +468,10 @@ Global Symbols
 <LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_easy_gap_param_update_msg_create
 <LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_easy_gap_undirected_advertise_start_create_msg
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gattc_write_req_ind_handler
-<LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc3_read_non_db_val_handler
-<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_rest_att_info_req_handler
-<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_long_val_att_info_req_handler
-<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_long_val_cfg_ind_handler
+<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc3_read_non_db_val_handler
+<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_rest_att_info_req_handler
+<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_long_val_att_info_req_handler
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_long_val_cfg_ind_handler
 <LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_adcval1_timer_cb_handler
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_custs1_create_db
 <LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cancel_timer_handler
@@ -489,17 +489,17 @@ Global Symbols
 <LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_easy_gap_param_update_start
 <LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_easy_gap_undirected_advertise_start
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gattc_write_req_ind_handler
-<LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc3_read_non_db_val_handler
-<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_rest_att_info_req_handler
-<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_long_val_att_info_req_handler
-<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_long_val_cfg_ind_handler
+<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc3_read_non_db_val_handler
+<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_rest_att_info_req_handler
+<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_long_val_att_info_req_handler
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_long_val_cfg_ind_handler
 <LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_adcval1_timer_cb_handler
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_custs1_create_db
 <LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cancel_timer_handler
 <LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;create_timer
 </UL>
 
-<P><STRONG><a name="[1ab]"></a>ke_msg_send_basic</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE), UNUSED)
+<P><STRONG><a name="[1a8]"></a>ke_msg_send_basic</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE), UNUSED)
 <BR><BR>[Called By]<UL></UL>
 
 <P><STRONG><a name="[49]"></a>ke_task_init_func</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE), UNUSED)
@@ -565,7 +565,7 @@ Global Symbols
 <LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_correction_apply
 <LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lld_sleep_us_2_lpcycles_rcx_func
 <LI><a href="#[2a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rf_rssi_convert
-<LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
 <P><STRONG><a name="[109]"></a>__aeabi_idivmod</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE))
@@ -600,11 +600,11 @@ Global Symbols
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;default_app_on_set_dev_info
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;default_app_on_get_dev_name
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gattc_write_req_ind_handler
-<LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_add_ad_struct
+<LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_add_ad_struct
 <LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adv_data_update_timer_cb
-<LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc3_read_non_db_val_handler
-<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_led_wr_ind_handler
-<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_ctrl_wr_ind_handler
+<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc3_read_non_db_val_handler
+<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_led_wr_ind_handler
+<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_ctrl_wr_ind_handler
 <LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_adcval1_timer_cb_handler
 </UL>
 
@@ -749,13 +749,13 @@ Global Symbols
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_gap_process_handler
 </UL>
 
-<P><STRONG><a name="[1af]"></a>app_get_address_type_ROM</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE), UNUSED)
+<P><STRONG><a name="[1ac]"></a>app_get_address_type_ROM</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE), UNUSED)
 <BR><BR>[Called By]<UL></UL>
 
-<P><STRONG><a name="[1ad]"></a>app_fill_random_byte_array_ROM</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE), UNUSED)
+<P><STRONG><a name="[1aa]"></a>app_fill_random_byte_array_ROM</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE), UNUSED)
 <BR><BR>[Called By]<UL></UL>
 
-<P><STRONG><a name="[198]"></a>__aeabi_llsr</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE), UNUSED)
+<P><STRONG><a name="[195]"></a>__aeabi_llsr</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE), UNUSED)
 <BR><BR>[Called By]<UL></UL>
 
 <P><STRONG><a name="[c8]"></a>__aeabi_uldivmod</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE))
@@ -774,7 +774,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_easy_gap_undirected_advertise_start_create_msg
 </UL>
 
-<P><STRONG><a name="[17e]"></a>app_easy_gap_update_adv_data</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE))
+<P><STRONG><a name="[17b]"></a>app_easy_gap_update_adv_data</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, da14531_symbols.txt(ABSOLUTE))
 <BR><BR>[Called By]<UL><LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adv_data_update_timer_cb
 </UL>
 
@@ -790,29 +790,29 @@ Global Symbols
 <P><STRONG><a name="[20]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_da14531.o(.text)
 </UL>
-<P><STRONG><a name="[1da]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[1d7]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[ac]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[189]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<P><STRONG><a name="[186]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[1db]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[1d8]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[1dc]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[1d9]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[1dd]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[1da]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
 <P><STRONG><a name="[ae]"></a>__rt_lib_shutdown_fini</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry12b.o(.ARM.Collect$$$$0000000E))
 <BR><BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__arm_fini_ (Weak Reference)
 </UL>
 
-<P><STRONG><a name="[1de]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[1db]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000F))
 
-<P><STRONG><a name="[1df]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$00000011))
+<P><STRONG><a name="[1dc]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$00000011))
 
 <P><STRONG><a name="[1f]"></a>SystemInit</STRONG> (Thumb, 104 bytes, Stack size 8 bytes, system_da14531.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SystemInit
@@ -1239,7 +1239,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ConfigurePin
-<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_led_wr_ind_handler
+<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_led_wr_ind_handler
 </UL>
 
 <P><STRONG><a name="[f5]"></a>GPIO_SetActive</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, gpio.o(.text))
@@ -1248,7 +1248,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ConfigurePin
-<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_led_wr_ind_handler
+<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_led_wr_ind_handler
 </UL>
 
 <P><STRONG><a name="[f6]"></a>GPIO_ConfigurePin</STRONG> (Thumb, 78 bytes, Stack size 40 bytes, gpio.o(.text))
@@ -1354,17 +1354,17 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;conditionally_run_radio_cals
 <LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_offset_calibrate
-<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpadc_read
+<LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_adcval1_timer_cb_handler
 </UL>
 
 <P><STRONG><a name="[172]"></a>adc_disable</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, adc_531.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpadc_read
+<BR><BR>[Called By]<UL><LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_adcval1_timer_cb_handler
 </UL>
 
 <P><STRONG><a name="[105]"></a>adc_start</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, adc_531.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_get_sample
 <LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_get_temp
-<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpadc_read
+<LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_adcval1_timer_cb_handler
 </UL>
 
 <P><STRONG><a name="[104]"></a>adc_get_sample</STRONG> (Thumb, 24 bytes, Stack size 4 bytes, adc_531.o(.text))
@@ -1373,7 +1373,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_start
 </UL>
 <BR>[Called By]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_offset_calibrate
-<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpadc_read
+<LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_adcval1_timer_cb_handler
 </UL>
 
 <P><STRONG><a name="[106]"></a>adc_offset_calibrate</STRONG> (Thumb, 276 bytes, Stack size 24 bytes, adc_531.o(.text))
@@ -1382,7 +1382,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_get_sample
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpadc_read
+<BR>[Called By]<UL><LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_adcval1_timer_cb_handler
 </UL>
 
 <P><STRONG><a name="[c]"></a>ADC_Handler</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, adc_531.o(.text))
@@ -1393,7 +1393,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_correction_apply
 </UL>
-<BR>[Called By]<UL><LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpadc_read
+<BR>[Called By]<UL><LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_adcval1_timer_cb_handler
 </UL>
 
 <P><STRONG><a name="[d1]"></a>adc_get_temp</STRONG> (Thumb, 64 bytes, Stack size 8 bytes, adc_531.o(.text))
@@ -1908,7 +1908,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_app_connection
 <LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_app_adv_start
 <LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adv_data_update_timer_cb
-<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_ctrl_wr_ind_handler
+<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_ctrl_wr_ind_handler
 <LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_adcval1_timer_cb_handler
 </UL>
 
@@ -1921,7 +1921,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_app_disconnect
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_app_connection
-<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_ctrl_wr_ind_handler
+<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_ctrl_wr_ind_handler
 </UL>
 
 <P><STRONG><a name="[7e]"></a>custs_get_func_callbacks</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, app_customs.o(.text))
@@ -1970,23 +1970,26 @@ Global Symbols
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arch_resume_from_sleep
 </UL>
 
-<P><STRONG><a name="[2d]"></a>app_adcval1_timer_cb_handler</STRONG> (Thumb, 130 bytes, Stack size 184 bytes, user_custs1_impl.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 264<LI>Call Chain = app_adcval1_timer_cb_handler &rArr; gpadc_read &rArr; adc_offset_calibrate &rArr; adc_init &rArr; adc_configure
+<P><STRONG><a name="[2d]"></a>app_adcval1_timer_cb_handler</STRONG> (Thumb, 164 bytes, Stack size 32 bytes, user_custs1_impl.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = app_adcval1_timer_cb_handler &rArr; adc_offset_calibrate &rArr; adc_init &rArr; adc_configure
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<BR>[Calls]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_start
+<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_offset_calibrate
+<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_get_sample
+<LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_disable
+<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_correct_sample
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_init
 <LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ke_state_get
 <LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_easy_timer
 <LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ke_msg_send
 <LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ke_msg_alloc
-<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prf_get_task_from_id
-<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpadc_read
-<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpadc_sample_to_mv
-<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
-<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcat
+<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prf_get_task_from_id
+<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> user_custs1_impl.o(.text)
 </UL>
-<P><STRONG><a name="[177]"></a>user_svc1_ctrl_wr_ind_handler</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, user_custs1_impl.o(.text))
+<P><STRONG><a name="[174]"></a>user_svc1_ctrl_wr_ind_handler</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, user_custs1_impl.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = user_svc1_ctrl_wr_ind_handler &rArr; app_easy_timer &rArr; create_timer
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
@@ -1996,7 +1999,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_catch_rest_hndl
 </UL>
 
-<P><STRONG><a name="[178]"></a>user_svc1_led_wr_ind_handler</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, user_custs1_impl.o(.text))
+<P><STRONG><a name="[175]"></a>user_svc1_led_wr_ind_handler</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, user_custs1_impl.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = user_svc1_led_wr_ind_handler &rArr; GPIO_SetActive
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetActive
@@ -2006,29 +2009,29 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_catch_rest_hndl
 </UL>
 
-<P><STRONG><a name="[179]"></a>user_svc1_long_val_cfg_ind_handler</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, user_custs1_impl.o(.text))
+<P><STRONG><a name="[176]"></a>user_svc1_long_val_cfg_ind_handler</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, user_custs1_impl.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = user_svc1_long_val_cfg_ind_handler
 </UL>
 <BR>[Calls]<UL><LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ke_msg_send
 <LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ke_msg_alloc
-<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prf_get_task_from_id
+<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prf_get_task_from_id
 </UL>
 <BR>[Called By]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_catch_rest_hndl
 </UL>
 
-<P><STRONG><a name="[182]"></a>user_svc1_long_val_wr_ind_handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, user_custs1_impl.o(.text))
+<P><STRONG><a name="[17f]"></a>user_svc1_long_val_wr_ind_handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, user_custs1_impl.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_catch_rest_hndl
 </UL>
 
-<P><STRONG><a name="[180]"></a>user_svc1_adc_val_1_cfg_ind_handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, user_custs1_impl.o(.text))
+<P><STRONG><a name="[17d]"></a>user_svc1_adc_val_1_cfg_ind_handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, user_custs1_impl.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_catch_rest_hndl
 </UL>
 
-<P><STRONG><a name="[181]"></a>user_svc1_button_cfg_ind_handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, user_custs1_impl.o(.text))
+<P><STRONG><a name="[17e]"></a>user_svc1_button_cfg_ind_handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, user_custs1_impl.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_catch_rest_hndl
 </UL>
 
-<P><STRONG><a name="[17a]"></a>user_svc1_long_val_att_info_req_handler</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, user_custs1_impl.o(.text))
+<P><STRONG><a name="[177]"></a>user_svc1_long_val_att_info_req_handler</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, user_custs1_impl.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = user_svc1_long_val_att_info_req_handler
 </UL>
 <BR>[Calls]<UL><LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ke_msg_send
@@ -2037,7 +2040,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_catch_rest_hndl
 </UL>
 
-<P><STRONG><a name="[17b]"></a>user_svc1_rest_att_info_req_handler</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, user_custs1_impl.o(.text))
+<P><STRONG><a name="[178]"></a>user_svc1_rest_att_info_req_handler</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, user_custs1_impl.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = user_svc1_rest_att_info_req_handler
 </UL>
 <BR>[Calls]<UL><LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ke_msg_send
@@ -2046,13 +2049,13 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_catch_rest_hndl
 </UL>
 
-<P><STRONG><a name="[17c]"></a>user_svc3_read_non_db_val_handler</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, user_custs1_impl.o(.text))
+<P><STRONG><a name="[179]"></a>user_svc3_read_non_db_val_handler</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, user_custs1_impl.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = user_svc3_read_non_db_val_handler
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 <LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ke_msg_send
 <LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ke_msg_alloc
-<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prf_get_task_from_id
+<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prf_get_task_from_id
 </UL>
 <BR>[Called By]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_catch_rest_hndl
 </UL>
@@ -2072,7 +2075,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_easy_timer
 <LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_easy_gap_undirected_advertise_get_active
 <LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_easy_gap_undirected_advertise_start
-<LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_add_ad_struct
+<LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_add_ad_struct
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_app_disconnect
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_app_connection
@@ -2108,7 +2111,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_easy_timer_cancel
 <LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_app_adv_start
-<LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mnf_data_update
+<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mnf_data_update
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gapc_disconnect_ind_handler
 </UL>
@@ -2119,15 +2122,15 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ke_msg_send
 <LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ke_msg_alloc
-<LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc3_read_non_db_val_handler
-<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_rest_att_info_req_handler
-<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_long_val_att_info_req_handler
-<LI><a href="#[181]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_button_cfg_ind_handler
-<LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_adc_val_1_cfg_ind_handler
-<LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_long_val_wr_ind_handler
-<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_long_val_cfg_ind_handler
-<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_led_wr_ind_handler
-<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_ctrl_wr_ind_handler
+<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc3_read_non_db_val_handler
+<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_rest_att_info_req_handler
+<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_long_val_att_info_req_handler
+<LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_button_cfg_ind_handler
+<LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_adc_val_1_cfg_ind_handler
+<LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_long_val_wr_ind_handler
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_long_val_cfg_ind_handler
+<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_led_wr_ind_handler
+<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_svc1_ctrl_wr_ind_handler
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gapc_cmp_evt_handler
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gapm_cmp_evt_handler
@@ -2137,9 +2140,9 @@ Global Symbols
 <P><STRONG><a name="[58]"></a>JT_lld_test_mode_rx_func</STRONG> (Thumb, 142 bytes, Stack size 24 bytes, patch.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = JT_lld_test_mode_rx_func
 </UL>
-<BR>[Calls]<UL><LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lld_util_freq2chnl
-<LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lld_evt_adv_create
-<LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lld_evt_elt_insert
+<BR>[Calls]<UL><LI><a href="#[181]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lld_util_freq2chnl
+<LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lld_evt_adv_create
+<LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lld_evt_elt_insert
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jump_table.o(.constdata)
 </UL>
@@ -2147,7 +2150,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = JT_l2cc_pdu_unpack_func
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
-<LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gapc_lecnx_check_rx
+<LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gapc_lecnx_check_rx
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jump_table.o(.constdata)
 </UL>
@@ -2155,8 +2158,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = JT_l2cc_pdu_recv_ind_handler_func
 </UL>
 <BR>[Calls]<UL><LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ke_state_get
-<LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;l2cc_pdu_recv_ind_handler_func
-<LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;smpc_pdu_recv
+<LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;l2cc_pdu_recv_ind_handler_func
+<LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;smpc_pdu_recv
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jump_table.o(.constdata)
 </UL>
@@ -2168,26 +2171,22 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arch_rom_init
 </UL>
 
-<P><STRONG><a name="[176]"></a>strcat</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, strcat.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_adcval1_timer_cb_handler
-</UL>
-
 <P><STRONG><a name="[ad]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
+<BR><BR>[Calls]<UL><LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[1e0]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[1dd]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
-<P><STRONG><a name="[18a]"></a>__0sprintf$1</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, printf1.o(i.__0sprintf$1), UNUSED)
+<P><STRONG><a name="[187]"></a>__0sprintf$1</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, printf1.o(i.__0sprintf$1), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sputc
-<LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[1e1]"></a>__1sprintf$1</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf1.o(i.__0sprintf$1), UNUSED)
+<P><STRONG><a name="[1de]"></a>__1sprintf$1</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf1.o(i.__0sprintf$1), UNUSED)
 
-<P><STRONG><a name="[175]"></a>__2sprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf1.o(i.__0sprintf$1))
+<P><STRONG><a name="[173]"></a>__2sprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf1.o(i.__0sprintf$1))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2sprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_adcval1_timer_cb_handler
@@ -2199,11 +2198,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lld_sleep_lpcycles_2_us_rcx_func
 </UL>
 
-<P><STRONG><a name="[1e2]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[1df]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[1e3]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[1e0]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[1e4]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[1e1]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 <P>
 <H3>
 Local Symbols
@@ -2547,24 +2546,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_timer_api_process_handler
 </UL>
 
-<P><STRONG><a name="[174]"></a>gpadc_sample_to_mv</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, user_custs1_impl.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_adcval1_timer_cb_handler
-</UL>
-
-<P><STRONG><a name="[171]"></a>gpadc_read</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, user_custs1_impl.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = gpadc_read &rArr; adc_offset_calibrate &rArr; adc_init &rArr; adc_configure
-</UL>
-<BR>[Calls]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_start
-<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_offset_calibrate
-<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_get_sample
-<LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_disable
-<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_correct_sample
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_init
-</UL>
-<BR>[Called By]<UL><LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_adcval1_timer_cb_handler
-</UL>
-
-<P><STRONG><a name="[17d]"></a>mnf_data_update</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, user_peripheral.o(.text))
+<P><STRONG><a name="[17a]"></a>mnf_data_update</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, user_peripheral.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_app_disconnect
 <LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adv_data_update_timer_cb
 </UL>
@@ -2574,8 +2556,8 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 <LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_easy_timer
-<LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_easy_gap_update_adv_data
-<LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mnf_data_update
+<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_easy_gap_update_adv_data
+<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mnf_data_update
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> user_peripheral.o(.text)
 </UL>
@@ -2586,7 +2568,7 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> user_peripheral.o(.text)
 </UL>
-<P><STRONG><a name="[17f]"></a>app_add_ad_struct</STRONG> (Thumb, 130 bytes, Stack size 32 bytes, user_peripheral.o(.text))
+<P><STRONG><a name="[17c]"></a>app_add_ad_struct</STRONG> (Thumb, 130 bytes, Stack size 32 bytes, user_peripheral.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = app_add_ad_struct
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
@@ -2594,14 +2576,14 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_app_adv_start
 </UL>
 
-<P><STRONG><a name="[18b]"></a>_printf_core</STRONG> (Thumb, 332 bytes, Stack size 88 bytes, printf1.o(i._printf_core), UNUSED)
+<P><STRONG><a name="[188]"></a>_printf_core</STRONG> (Thumb, 332 bytes, Stack size 88 bytes, printf1.o(i._printf_core), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0sprintf$1
+<BR>[Called By]<UL><LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0sprintf$1
 </UL>
 
 <P><STRONG><a name="[30]"></a>_sputc</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, printf1.o(i._sputc))
-<BR><BR>[Called By]<UL><LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0sprintf$1
+<BR><BR>[Called By]<UL><LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0sprintf$1
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> printf1.o(i.__0sprintf$1)
 </UL><P>

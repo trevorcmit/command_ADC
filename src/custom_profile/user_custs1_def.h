@@ -40,7 +40,7 @@
 
 #define DEF_SVC1_CTRL_POINT_CHAR_LEN     1
 #define DEF_SVC1_LED_STATE_CHAR_LEN      1
-#define DEF_SVC1_ADC_VAL_1_CHAR_LEN      161 // Max 232 as far as we know
+#define DEF_SVC1_ADC_VAL_1_CHAR_LEN      5 // Max 232 as far as we know
 #define DEF_SVC1_ADC_VAL_2_CHAR_LEN      2
 #define DEF_SVC1_BUTTON_STATE_CHAR_LEN   1
 #define DEF_SVC1_INDICATEABLE_CHAR_LEN   20
